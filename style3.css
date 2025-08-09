@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background: transparent;
+  color: white;
+  padding: 0 3rem;
+}
+.navbar .img {
+  flex: 0 0 auto;
+}
+.navbar ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.navbar a:hover {
+  color: rgb(207, 158, 68);
+  transition: 0.1s ease;;
+}
+.navbar a:active {
+  color: rgb(152, 47, 9);
+}
+.navbar img {
+  height: 4rem;
+  width: auto;
+}
+.cover {
+  overflow: hidden;
+}
+.cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1rem 0;
+}
+.grid img {
+  width: 450px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+.grid img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem 8rem;
+}
+.text p {
+  color: #1f1f1f;
+  font-size: 18px;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .grid img {
+    width: 95vw;
+    max-width: 340px;
+    height: auto;
+    margin: 0.5rem auto;
+    display: block;
+  }
+}
+
+
+
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  background-color: #1F1F1F;
+  color: white;
+  padding: 0.5rem 0 0.2rem 0;
+  min-height: 60px;
+}
+footer img {
+  height: 6rem;
+  width: auto;
+}
+.footer-link ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .footer-link ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+}
+.footer-link ul li {
+  margin: 0.5rem 0;
+}
+.footer-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+.footer-link a:hover {
+  color: rgb(207, 158, 68);
+}
+.footer-link a:active {
+  color: rgb(152, 47, 9);
+}
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+.social a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.fb a:hover {
+  color: blue;
+}
+.fb a:active {
+  color: blue;
+}
+.insta a:hover {
+  color: rgb(231, 88, 88);
+}
+.insta a:active {
+  color: rgb(231, 88, 88);
+}
+.footer-signature {
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  color: #ccc;
+  letter-spacing: 2px;
+}
