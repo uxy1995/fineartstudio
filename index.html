@@ -11,30 +11,30 @@
       <nav>
         <div class="traka">
           <img src="logo.png" alt="FineArt Logo">
-        <ul class="dropdown">
+        <ul class="dropdown" id="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
           <i class="fa-solid fa-bars"></i>
         </div>
         </div>
       </nav>
     </header>
       <div class="cover">
-        <img src="slika.19.jpg" alt="Wedding couple by the sea">
+        <img src="copy.slika.19-blur.jpg" alt="Wedding couple by the sea">
+        <div class="overlay"></div>
       </div>
     <section class="intro">
     <div class="text">
-      <h2>Welcome to our world - world of timeless moments</h2>
-      <p>We are a team of three passionate photographers whit over <b>10 years of experience</b>, specializing in <strong>wedding</strong> photography.</p>
-        <p>What brought us together is a deep love for authentic storytelling and capturing the beauty of real moments - and that's exactly what defines our studio today.</p>
-          <p>Each of us brings a different perspective and style, but we share a same mission: to tell your story throught timeless images you'll want to revisit again and again.</p>
+      <h2>Timeless wedding stories told through emotion.</h2>
+      <p>We are three passionate photographers whit over 10 years of experience in capturing real, heartfelt moments.</p>
     </div>
-      <button class="btn"><a href="portfolio.html">View portfolio</a></button>
+      <button class="btn"><a href="photo.html">Contact us</a></button>
     </section>
-    <section class="cover2">
+    <!-- <section class="cover2">
       <div>
         <img src="slika6.jpg" alt="Wedding couple by the sea">
       </div>
@@ -54,18 +54,19 @@
         <div class="footer-link">
                   <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="photo.html">Photo</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
         </div>
         <div class="social">
                   <div class="fb">
-                    <a href="https://facebook.com/PhotoStudioFineArt" target="_blank">
+                    <a href="https://facebook.com/PhotoStudioFineArt" target="_blank" rel="noopener noreferrer">
                       <i class="fa-brands fa-facebook"></i>
                     </a>
                   </div>
                   <div class="insta">
-                    <a href="https://instagram.com/@fineartstudio1" target="_blank">
+                    <a href="https://instagram.com/fineart_studio1/" target="_blank" rel="noopener noreferrer">
                       <i class="fa-brands fa-instagram"></i>
                     </a>
                   </div>
@@ -73,6 +74,14 @@
                     <div class="footer-signature">
                       © 2025 FineArt. All rights reserved.
         </div>
-       </footer>
+       </footer> -->
+       <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
    </body>
 </html>

@@ -12,12 +12,13 @@
       <nav>
         <div class="traka">
           <img src="logo.png" alt="FineArt Logo">
-        <ul class="dropdown">
+        <ul class="dropdown" id="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
           <i class="fa-solid fa-bars"></i>
         </div>
         </div>
@@ -45,7 +46,7 @@
       <div class="info">
         <div class="adresa">
           <h4>Address:</h4>
-          <p>Dusana Stamenkovica 319,<br>
+          <p>Dušana Stamenkovića 319,<br>
           17500 Vranje, Srbija</p>
         </div>
         <div class="phone">
@@ -67,8 +68,9 @@
         <div class="footer-link">
                   <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="photo.html">Photo</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
         </div>
         <div class="social">
@@ -87,5 +89,13 @@
                       © 2025 FineArt. All rights reserved.
         </div>
        </footer>
+       <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
    </body>
 </html>
