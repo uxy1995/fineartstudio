@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Portfolio</title>
+    <title>Photo</title>
   </head>
   <body>
     <header>
@@ -33,40 +33,49 @@
     <section class="portfolio">
       <div class="grid">
         <div class="grid-item">
-          <img src="slika1.jpg" alt="Portfolio Image 1">
+          <img src="slika1.jpg" alt="Portfolio Image 1" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika2.jpg" alt="Portfolio Image 2">
+          <img src="slika2.jpg" alt="Portfolio Image 2" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika5.jpg" alt="Portfolio Image 3">
+          <img src="slika5.jpg" alt="Portfolio Image 3" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika9.jpg" alt="Portfolio Image 4">
+          <img src="slika9.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika18.jpg" alt="Portfolio Image 4">
+          <img src="slika18.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika10.jpg" alt="Portfolio Image 4">
+          <img src="slika10.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika11.jpg" alt="Portfolio Image 4">
+          <img src="slika11.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika12.jpg" alt="Portfolio Image 4">
+          <img src="slika12.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika13.jpg" alt="Portfolio Image 4">
+          <img src="slika13.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika14.jpg" alt="Portfolio Image 4">
+          <img src="slika14.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika15.jpg" alt="Portfolio Image 4">
+          <img src="slika15.jpg" alt="Portfolio Image 4" class="gallery-img">
         </div>
         <div class="grid-item">
-          <img src="slika17.jpg" alt="Portfolio Image 4">
+          <img src="slika17.jpg" alt="Portfolio Image 4" class="gallery-img">
+        </div>
+      </div>
+      <!-- Lightbox modal -->
+      <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="nav-arrows">
+          <span class="prev">&#10094;</span>
+          <span class="next">&#10095;</span>
         </div>
       </div>
     </section>
@@ -106,5 +115,84 @@
     navLinks.classList.toggle('active');
   });
 </script>
+<script>
+  const galleryImages = document.querySelectorAll(".gallery-img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    lightbox.style.display = "flex";
+    lightboxImg.src = galleryImages[index].src;
+    currentIndex = index;
+  }
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      showImage(index);
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+
+  // ESC za izlaz
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      lightbox.style.display = "none";
+    } else if (e.key === "ArrowLeft") {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      showImage(currentIndex);
+    } else if (e.key === "ArrowRight") {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      showImage(currentIndex);
+    }
+  });
+  let startX = 0;
+let endX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+  startX = e.changedTouches[0].screenX;
+});
+
+lightbox.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  if (startX - endX > 50) {
+    // swipe levo
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  } else if (endX - startX > 50) {
+    // swipe desno
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  }
+}
+</script>
+
    </body>
 </html>

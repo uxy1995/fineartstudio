@@ -60,9 +60,9 @@ header {
     display: none;
     flex-direction: column;
     text-align: center;
-    background-color: #1e201ea0;
+    background-color: #1e201e;
     gap: 1rem;
-    padding: 1rem 4rem 1rem 4rem;
+    padding: 1rem 5rem 1rem 5rem;
     position: absolute;
     top: 300%;
     left: 50%;
@@ -102,11 +102,11 @@ header {
     display: none;
     flex-direction: column;
     text-align: center;
-    background-color: #1e201ea0;
+    background-color: #1e201e;
     gap: 0.5rem;
-    padding: 0.8rem 3rem 0.8rem 3rem;
+    padding: 0.8rem 5rem 0.8rem 5rem;
     position: absolute;
-    top: 250%;
+    top: 270%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
@@ -143,11 +143,11 @@ header {
     display: none;
     flex-direction: column;
     text-align: center;
-    background-color: #1e201ea0;
+    background-color: #1e201e;
     gap: 0.5rem;
-    padding: 0.8rem 2rem 0.8rem 2rem;
+    padding: 0.8rem 4rem 0.8rem 4rem;
     position: absolute;
-    top: 250%;
+    top: 270%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
@@ -228,8 +228,6 @@ header {
   background: transparent;
 }
 
-/* pojedinačni elementi u formi zauzimaju po jednu kolonu,
-   label ide preko svakog inputa, pa koristimo full-width za label+input kombinaciju */
 .forme .polja form label {
   grid-column: 1 / -1;
   font-size: 0.95rem;
@@ -254,19 +252,16 @@ header {
   min-height: 44px;
 }
 
-/* dvoje polja u redu (first + last name) */
 .forme .polja form input[type="text"]:not(:last-child) {
   /* ostat će u gridu, ne treba dodatno */
 }
 
-/* textarea */
 .forme .polja form textarea {
   min-height: 140px;
   line-height: 1.4;
   padding-top: 0.9rem;
 }
 
-/* dugme */
 .forme .polja form button {
   grid-column: 1 / -1;
   width: fit-content;
@@ -286,7 +281,6 @@ header {
   transform: translateY(-1px);
 }
 
-/* focus state */
 .forme .polja form input:focus,
 .forme .polja form textarea:focus {
   outline: none;
@@ -294,7 +288,6 @@ header {
   box-shadow: 0 6px 20px rgba(207,158,68,0.12);
 }
 
-/* info kolona */
 .forme .info {
   flex: 0 0 380px;        /* malo veća kolona */
   max-width: 380px;   /* razmak između info i forme */
@@ -318,7 +311,6 @@ header {
   color: #333;
 }
 
-/* responsive: na manjim ekranima vraćamo .info ispod forme */
 @media (max-width: 768px) {
   .forme {
     padding: 1.2rem;
@@ -342,6 +334,12 @@ header {
   .forme .polja form button {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .forme .info p {
+    font-size: 0.85rem;
   }
 }
 /* __________SADRZAJ__________ */

@@ -110,7 +110,7 @@ header {
     text-align: center;
     background-color: #1e201ea0;
     gap: 0.5rem;
-    padding: 0.8rem 3rem 0.8rem 3rem;
+    padding: 0.5rem 3rem 0.8rem 3rem;
     position: absolute;
     top: 250%;
     left: 50%;
@@ -232,24 +232,27 @@ header {
 }
 
 @media (max-width: 768px) {
+  .intro {
+    padding: 0;
+  }
   .text h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .text p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.5;
   }
 }
 
 @media (max-width: 440px) {
   .intro {
-    padding: 0 1rem;
+    padding: 0;
   }
   .text h2 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .text p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.4;
   }
 }
@@ -257,12 +260,13 @@ header {
 @media (max-width: 380px) {
   .intro {
     top: 55%;
+    padding: 0;
   }
   .text h2 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .text p {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     line-height: 1.4;
   }
 }
@@ -302,26 +306,26 @@ header {
 }
 
 .btn:hover {
-  background-color: rgb(62, 62, 62);
+  background-color: rgb(208, 135, 19);
   transition: 0.3s ease 0s;
   transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
   .btn {
-    padding: 0.3rem 0.6rem;
+    padding: 0.6rem 1rem;
   }
   .btn a {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .btn {
-    padding: 0.2rem 0.5rem;
+    padding: 0.5rem 0.9rem;
   }
   .btn a {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 }
 
