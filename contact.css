@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVIGATION BAR */
+
+header {
+  position: absolute;
+  background-color: #222;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+}
+.traka {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.traka img {
+  height: 1.8rem;
+  width: auto;
+  padding-top: 0.3rem;
+  padding-right: 3rem;
+}
+
+.traka img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.traka .hamburger {
+  color: rgb(255, 255, 255);
+  display: none;
+}
+
+.traka ul li {
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+.traka ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.traka ul li a:hover {
+  color: rgb(207, 158, 68);
+  transition: 0.3s ease 0s;
+}
+
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1e201e;
+    gap: 1rem;
+    padding: 1rem 5rem 1rem 5rem;
+    position: absolute;
+    top: 300%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    border-radius: 10px;
+  }
+
+  #nav-links li a {
+    font-size: 1rem;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+  .traka img {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 4rem;
+    height: 1.5rem;
+    width: auto;
+  }
+  .traka .hamburger {
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1e201e;
+    gap: 0.5rem;
+    padding: 0.8rem 5rem 0.8rem 5rem;
+    position: absolute;
+    top: 270%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    border-radius: 10px;
+  }
+
+  #nav-links li a {
+    font-size: 0.8rem;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+  .traka img {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 3rem;
+    height: 1.2rem;
+    width: auto;
+  }
+  .traka .hamburger {
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 375px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1e201e;
+    gap: 0.5rem;
+    padding: 0.8rem 4rem 0.8rem 4rem;
+    position: absolute;
+    top: 270%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    border-radius: 10px;
+  }
+  #nav-links li a {
+    font-size: 0.7rem;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+  .traka img {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 3rem;
+    height: 1rem;
+    width: auto;
+  }
+  .traka .hamburger {
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+/* __________NAVIGATION BAR____________ */
+
+
+
+
+
+/* SADRZAJ */
+
+.naslov {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 2rem 2rem 2rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.naslov h1 p {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.forme {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.forme .polja {
+  flex: 1 1 420px;
+  display: flex;
+  justify-content: center;
+}
+
+.forme .polja form {
+  width: 100%;
+  max-width: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  background: transparent;
+}
+
+.forme .polja form label {
+  grid-column: 1 / -1;
+  font-size: 0.95rem;
+  color: #222;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.forme .polja form input,
+.forme .polja form textarea {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  font-size: 0.95rem;
+  transition: box-shadow .18s ease, border-color .18s ease, transform .12s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  resize: vertical;
+  min-height: 44px;
+}
+
+.forme .polja form textarea {
+  min-height: 140px;
+  line-height: 1.4;
+  padding-top: 0.9rem;
+}
+
+.forme .polja form button {
+  grid-column: 1 / -1;
+  width: fit-content;
+  padding: 0.55rem 1.1rem;
+  background: #fff;
+  border: 1.5px solid rgb(125,125,125);
+  border-radius: 26px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  transition: background .16s, color .16s, transform .06s;
+}
+.forme .polja form button:hover {
+  background: rgb(207,158,68);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.forme .polja form input:focus,
+.forme .polja form textarea:focus {
+  outline: none;
+  border-color: rgba(207,158,68,0.95);
+  box-shadow: 0 6px 20px rgba(207,158,68,0.12);
+}
+
+.forme .info {
+  flex: 0 0 380px;        /* malo veća kolona */
+  max-width: 380px;   /* razmak između info i forme */
+  padding: 1rem 1.5rem 1rem 0;
+  text-align: center;       /* levo poravnanje za bolji izgled */
+  background: rgba(243, 243, 243, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+
+.forme .info h3,
+.forme .info h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.forme .info p {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .forme {
+    padding: 1.2rem;
+    gap: 1.25rem;
+  }
+  .forme .polja form {
+    grid-template-columns: 1fr;
+  }
+  .forme .info {
+    flex: 1 1 100%;
+    max-width: 100%;
+    order: 2;
+    margin-right: 0;
+    padding: 0.9rem;
+    text-align: center;
+  }
+  .forme .polja {
+    order: 1;
+    width: 100%;
+  }
+  .forme .polja form button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .forme .info p {
+    font-size: 0.85rem;
+  }
+}
+/* __________SADRZAJ__________ */
+
+
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  background-color: #1E201E;
+  box-shadow: 0px 0px 15px rgba(65, 65, 65, 0.3);
+}
+
+.footer-logo img {
+  height: 1.8rem;
+  width: auto;
+}
+
+.footer-link ul li {
+  list-style: none;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-link ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+.footer-link ul li a:hover {
+  color: rgb(207, 158, 68);
+  transition: 0.3s ease 0s;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.fb i {
+  color: rgb(33, 86, 244);
+}
+
+.insta i {
+  color: rgb(241, 53, 88);
+}
+
+.footer-signature {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    height: 1.5rem;
+  }
+  .footer-link ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-link ul li {
+    padding-top: 0.5rem;
+  }
+  .footer-link ul li a {
+    font-size: 0.9rem;
+  }
+  .social {
+    font-size: 0.8rem;
+  }
+  .footer-signature {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo img {
+    height: 1.2rem;
+  }
+  .footer-link ul li a {
+    font-size: 0.8rem;
+  }
+  .social {
+    font-size: 0.7rem;
+  }
+  .footer-signature {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-logo img {
+    height: 1rem;
+  }
+  .footer-link ul li a {
+    font-size: 0.7rem;
+  }
+  .social {
+    font-size: 0.6rem;
+  }
+  .footer-signature {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .footer-logo img {
+    height: 0.8rem;
+  }
+  .footer-link ul li {
+    padding-top: 0.3rem;
+    line-height: 0.8rem;
+  }
+  .footer-link ul li a {
+    font-size: 0.6rem;
+  }
+  .social {
+    font-size: 0.5rem;
+  }
+  .footer-signature {
+    font-size: 0.4rem;
+  }
+}
+/* __________FOOTER__________ */

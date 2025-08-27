@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    
+   <title>About</title>
+  </head>
+  <body>
+        <header>
+      <nav>
+        <div class="traka">
+          <a href="index.html">
+          <img src="logo.png" alt="FineArt Logo">
+          </a>
+        <ul class="dropdown" id="nav-links">
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        </div>
+      </nav>
+    </header>
+       <div class="cover">
+        <img src="slika14-blur.jpg" alt="Wedding couple">
+      </div>
+    <section class="intro">
+      <div class="text">
+        <h1>Who we are?</h1>
+      </div>
+    </section>
+    <section class="about">
+       <div class="text2">
+      <p>We are a team of three passionate photographers with over 10 years of
+      experience, specializing in wedding photography.<br>
+    What brought us together is a deep love for authentic storytelling and
+  capturing the beauty of real moments - and that's exactly what defines our
+studio today.<br>
+Each of us brings a different perspective and style, but we share a same
+mission: to tell your story throught timeless images you'll want to revisit<br>
+again and again.</p>
+    </div>
+    </section>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+  </body>
+</html>
