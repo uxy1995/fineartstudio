@@ -211,6 +211,8 @@ header {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
+
+
 .intro {
   position: fixed;
   top: 140px;
@@ -225,9 +227,9 @@ header {
   padding: 0 1rem;
 }
 
-
+/* fluid headline */
 .text h1 {
-  font-size: clamp(1.6rem, 4.5vw, 4rem);
+  font-size: clamp(1.6rem, 4.5vw, 4rem); /* scales between small and large */
   font-weight: 400;
   color: rgb(255,255,255);
   text-align: center;
@@ -238,7 +240,7 @@ header {
   margin: 0 0 0.4rem;
 }
 
-
+/* about block positioned under intro */
 .about {
   display: flex;
   position: fixed;
@@ -264,23 +266,23 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+/* ----- Breakpoints ----- */
 
-
-
+/* large desktops */
 @media (min-width: 1440px) {
   .text h1 { font-size: clamp(2.6rem, 3.5vw, 5rem); }
   .intro { top: 160px; }
   .about { top: 300px; }
 }
 
-
+/* tablets / small desktops */
 @media (max-width: 1024px) {
   .intro { top: 120px; max-width: 980px; }
   .about { top: 220px; width: min(88%, 900px); }
   .text h1 { font-size: clamp(1.8rem, 5.2vw, 3.4rem); }
 }
 
-
+/* main mobile breakpoint */
 @media (max-width: 768px) {
   .intro { top: 110px; padding: 0 1rem; }
   .about { top: 190px; width: 92%; padding: 0 0.8rem; position: fixed; }
@@ -288,7 +290,7 @@ header {
   .about .text2 { font-size: 1rem; }
 }
 
-
+/* small phones portrait */
 @media (max-width: 425px) {
   .intro { top: 95px; padding: 0 0.8rem; }
   .about { top: 160px; width: 94%; }
@@ -296,7 +298,7 @@ header {
   .about .text2 { font-size: 0.95rem; line-height: 1.5; }
 }
 
-
+/* very small phones */
 @media (max-width: 320px) {
   .intro { top: 78px; }
   .about { top: 140px; width: 96%; }
@@ -304,17 +306,18 @@ header {
   .about .text2 { font-size: 0.88rem; }
 }
 
-
+/* landscape small phones (rotate) */
 @media (max-width: 658px) and (orientation: landscape) {
   .intro { top: 80px; transform: translateX(-50%); }
   .about { top: 140px; width: 95%; }
   .text h1 { font-size: clamp(1.1rem, 5.5vw, 1.6rem); }
 }
 
-
+/* accessibility / safety: ensure elements don't overlap page edges */
 @media (max-width: 480px) {
   .intro, .about { padding-left: 1rem; padding-right: 1rem; }
 }
 
-
+/* keep images responsive */
 img { max-width: 100%; height: auto; display: block; }
+/* ...existing code... */
