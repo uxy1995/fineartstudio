@@ -59,6 +59,8 @@ html, body {
   margin: 2rem auto;
   padding: 0.6rem 1rem;
   background-color: rgb(255, 255, 255);
+  color: black;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   border-radius: 20px;
   border: none;
@@ -66,10 +68,8 @@ html, body {
 }
 
 .btn a {
-  color: rgb(39, 39, 39);
   text-decoration: none;
   font-size: 0.8rem;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
